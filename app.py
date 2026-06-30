@@ -110,11 +110,3 @@ if submitted:
         "⚠️ This tool is for research purposes only and is **not validated for clinical decision-making**. "
         "It must not be used to guide individual patient care without further external validation."
     )
-
-st.markdown("---")
-with st.expander("Model details"):
-    st.json(config["catboost_params"])
-    st.write("5-fold cross-validated performance metrics:")
-    st.json({k: v for k, v in config["cv_metrics"].items() if k != "Confusion_matrix"})
-    st.write("Confusion matrix (5-fold CV, out-of-fold predictions):")
-    st.json(config["cv_metrics"]["Confusion_matrix"])
