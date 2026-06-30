@@ -1,0 +1,116 @@
+{
+  "categorical_features": [
+    "Inpatient setting",
+    "Ulcer site",
+    "Wagner grade",
+    "Perfusion status",
+    "Ulcer size",
+    "Ulcer infiltration"
+  ],
+  "numerical_features": [
+    "Platelet",
+    "Aspartate aminotransferase",
+    "SIRS score",
+    "Platelet to lymphocyte ratio"
+  ],
+  "all_features": [
+    "Inpatient setting",
+    "Ulcer site",
+    "Wagner grade",
+    "Perfusion status",
+    "Ulcer size",
+    "Ulcer infiltration",
+    "Platelet",
+    "Aspartate aminotransferase",
+    "SIRS score",
+    "Platelet to lymphocyte ratio"
+  ],
+  "target": "Amputation",
+  "catboost_params": {
+    "iterations": 50,
+    "learning_rate": 0.1,
+    "depth": 5,
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.5,
+    "l2_leaf_reg": 3,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "random_seed": 42,
+    "verbose": false
+  },
+  "decision_threshold": 0.491,
+  "cv_metrics": {
+    "AUC": 0.876234252638747,
+    "Accuracy": 0.832579185520362,
+    "Sensitivity": 0.7752808988764045,
+    "Specificity": 0.8712121212121212,
+    "PPV": 0.8023255813953488,
+    "NPV": 0.8518518518518519,
+    "F1": 0.7885714285714286,
+    "Brier_score": 0.13592223553653332,
+    "Threshold_used": 0.491,
+    "Confusion_matrix": {
+      "TN": 115,
+      "FP": 17,
+      "FN": 20,
+      "TP": 69
+    }
+  },
+  "n_train_instances": 221,
+  "category_levels": {
+    "Inpatient setting": [
+      "ICU",
+      "Ward"
+    ],
+    "Ulcer site": [
+      "Extensive",
+      "Forefoot",
+      "Hindfoot",
+      "Midfoot"
+    ],
+    "Wagner grade": [
+      "Grade 1",
+      "Grade 2",
+      "Grade 3",
+      "Grade 4",
+      "Grade 5"
+    ],
+    "Perfusion status": [
+      "Critical Limb Ischemia",
+      "Normal",
+      "PAD"
+    ],
+    "Ulcer size": [
+      "Large",
+      "Medium",
+      "Small"
+    ],
+    "Ulcer infiltration": [
+      "Deep",
+      "Superficial",
+      "Very Deep"
+    ]
+  },
+  "numerical_ranges": {
+    "Platelet": {
+      "min": 10.0,
+      "max": 783.0,
+      "median": 289.0
+    },
+    "Aspartate aminotransferase": {
+      "min": 7.0,
+      "max": 130.0,
+      "median": 18.0
+    },
+    "SIRS score": {
+      "min": 0.0,
+      "max": 4.0,
+      "median": 1.0
+    },
+    "Platelet to lymphocyte ratio": {
+      "min": 19.8952,
+      "max": 1315.1,
+      "median": 170.961
+    }
+  }
+}
