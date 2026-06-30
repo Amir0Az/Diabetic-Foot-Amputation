@@ -45,12 +45,10 @@ THRESHOLD = config["decision_threshold"]
 CATEGORY_LEVELS = config["category_levels"]
 NUM_RANGES = config["numerical_ranges"]
 
-st.title("🦶 Lower-Limb Amputation Risk Predictor")
+st.title("Diabetic Foot Ulcer Lower-Limb Amputation Risk Predictor")
 st.caption(
     "CatBoost model for predicting lower-limb amputation risk in hospitalized "
-    "diabetic foot ulcer patients. Trained on 221 patients with 5-fold cross-validated "
-    f"performance: AUC = {config['cv_metrics']['AUC']:.3f}, "
-    f"Accuracy = {config['cv_metrics']['Accuracy']:.3f} (threshold = {THRESHOLD:.3f})."
+    "diabetic foot ulcer patients."
 )
 
 st.markdown("---")
