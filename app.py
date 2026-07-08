@@ -17,7 +17,7 @@ import streamlit as st
 from catboost import CatBoostClassifier
 import joblib
 
-st.set_page_config(page_title="DFU Amputation Risk Predictor", page_icon="🦶", layout="centered")
+st.set_page_config(page_title="ALARM-DFU", page_icon="🦶", layout="centered")
 
 @st.cache_resource
 def load_artifacts():
@@ -44,7 +44,7 @@ THRESHOLD = config["decision_threshold"]
 CATEGORY_LEVELS = config["category_levels"]
 NUM_RANGES = config["numerical_ranges"]
 
-st.title("Diabetic Foot Ulcer Lower-Limb Amputation Risk Predictor")
+st.title("Amputation Likelihood Assessment & Risk Model for Diabetic Foot Ulcers (ALARM-DFU)")
 st.caption(
     "CatBoost model for predicting lower-limb amputation risk in hospitalized "
     "diabetic foot ulcer patients."
@@ -92,9 +92,9 @@ if submitted:
     c1, c2 = st.columns(2)
     with c1:
         if prediction == 1:
-            st.error("**Predicted: Amputation risk = YES (1)**")
+            st.error("**Predicted: Amputation risk = YES**")
         else:
-            st.success("**Predicted: Amputation risk = NO (0)**")
+            st.success("**Predicted: Amputation risk = NO**")
     with c2:
         st.metric("Predicted probability", f"{calibrated_prob:.1%}")
 
