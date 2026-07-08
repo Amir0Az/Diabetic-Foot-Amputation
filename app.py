@@ -1,15 +1,3 @@
-"""
-Streamlit web app: Lower-Limb Amputation Risk Prediction in Diabetic Foot Ulcer Patients
-==========================================================================================
-Loads the trained CatBoost model + Platt (sigmoid) calibrator + decision threshold,
-takes patient predictor values as input, and returns:
-  - Binary prediction (Amputation risk: Yes/No)
-  - Calibrated predicted probability
-
-Run locally:
-    streamlit run app.py
-"""
-
 import json
 import numpy as np
 import pandas as pd
