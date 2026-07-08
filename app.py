@@ -17,8 +17,7 @@ import streamlit as st
 from catboost import CatBoostClassifier
 import joblib
 
-st.set_page_config(page_title="ALARM-DFU", page_icon="🦶", layout="centered")
-
+st.set_page_config(page_title="DFU Amputation Risk Predictor", page_icon="🦶", layout="centered")
 
 @st.cache_resource
 def load_artifacts():
