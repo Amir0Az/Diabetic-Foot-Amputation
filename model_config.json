@@ -39,8 +39,7 @@
     "verbose": false
   },
   "decision_threshold": 0.470,
-    "Threshold_used": 0.470,
-  },
+
   "n_train_instances": 221,
   "category_levels": {
     "Inpatient setting": [
