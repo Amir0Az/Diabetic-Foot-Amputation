@@ -28,7 +28,7 @@ config, model, platt = load_artifacts()
 CAT_FEATURES = config["categorical_features"]
 NUM_FEATURES = config["numerical_features"]
 ALL_FEATURES = config["all_features"]
-THRESHOLD = config["decision_threshold"]
+THRESHOLD = 0.470
 CATEGORY_LEVELS = config["category_levels"]
 NUM_RANGES = config["numerical_ranges"]
 
